@@ -1,0 +1,62 @@
+<style>
+    /* Estilos para o menu */
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    li {
+        display: inline-block;
+        position: relative;
+    }
+    a {
+        display: block;
+        padding: 8px 16px;
+        text-decoration: none;
+        color: #000;
+        background-color: #f4f4f4;
+    }
+    ul ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+    ul li:hover > ul {
+        display: block;
+    }
+    ul ul li {
+        display: block;
+    }
+</style>
+</head>
+<body>
+<ul>
+    <li><a href="#">Início</a></li>
+    <li><a href="#">Clientes</a></li>
+    <li>
+        <a href="#">Serviços</a>
+        <ul>
+            <li><a href="#">Desenvolvimento de Sites</a></li>
+            <li><a href="#">Criação de Newsletters</a></li>
+            <li><a href="#">Otimização de SEO</a></li>
+            <li><a href="#">Design Gráfico</a></li>
+        </ul>
+    </li>
+    <li><a href="#">Sobre nós</a></li>
+    <li><a href="#">Contato</a></li> 
+     <h1>Formulário de Contato</h1>
+    <form action="/enviar" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required><br><br>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="telefone" name="telefone" required><br><br>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+</ul>
+</body>
